@@ -17,14 +17,16 @@ See also
 
 Nuts & Bolts
 --------------
-How to store in flash :
-const unsigned char FONT_CHARS[96][5] PROGMEM =
-{
-	{ 0x00, 0x00, 0x00, 0x00, 0x00 },  // (space)
-    { 0x00, 0x00, 0x5F, 0x00, 0x00 },  // !
-    { 0x00, 0x07, 0x00, 0x07, 0x00 },  // "
-...
+How to store in flash:
 
-How to read in flash :
-		byte = pgm_read_byte(&(charset[c][y]));
+	const unsigned char FONT_CHARS[96][5] PROGMEM =
+	{
+		{ 0x00, 0x00, 0x00, 0x00, 0x00 },  // (space)
+		{ 0x00, 0x00, 0x5F, 0x00, 0x00 },  // !
+		{ 0x00, 0x07, 0x00, 0x07, 0x00 },  // "
+	...
+
+How to read in flash:
+
+	byte = pgm_read_byte(&(charset[c][y]));
 
